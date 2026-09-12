@@ -1,0 +1,8 @@
+{
+  "name": "Concierge - Premium Travel AI",
+  "description": "Bespoke itineraries, Traveler DNA curation, and luxury travel concierge experience.",
+  "prompt": "Luxury travel concierge with bespoke itineraries and Traveler DNA curation.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

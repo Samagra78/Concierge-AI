@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Concierge - Traveler DNA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#390c00",
+                      "surface-container": "#efeeea",
+                      "on-primary": "#ffffff",
+                      "on-surface-variant": "#444748",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "surface-tint": "#5f5e5e",
+                      "on-background": "#1b1c1a",
+                      "outline": "#747878",
+                      "secondary-fixed": "#f4e2ac",
+                      "surface-container-highest": "#e4e2de",
+                      "on-primary-container": "#858383",
+                      "on-tertiary-fixed-variant": "#802a05",
+                      "champagne": "#E8D8B0",
+                      "slate-grey": "#5C6470",
+                      "on-error-container": "#93000a",
+                      "surface-container-low": "#f5f3ef",
+                      "surface-dim": "#dbdad6",
+                      "on-tertiary": "#ffffff",
+                      "secondary-container": "#f4e2ac",
+                      "outline-variant": "#c4c7c7",
+                      "on-primary-fixed-variant": "#474746",
+                      "on-secondary-container": "#706438",
+                      "surface-variant": "#e4e2de",
+                      "surface": "#FFFFFF",
+                      "emerald-muted": "#4A7C59",
+                      "inverse-surface": "#30312e",
+                      "tertiary-fixed-dim": "#ffb59c",
+                      "tertiary": "#000000",
+                      "primary-fixed": "#e5e2e1",
+                      "on-tertiary-container": "#d0643d",
+                      "inverse-primary": "#c8c6c5",
+                      "primary-container": "#1c1b1b",
+                      "background": "#fbf9f5",
+                      "inverse-on-surface": "#f2f0ed",
+                      "surface-container-high": "#eae8e4",
+                      "border-subtle": "#EAE6DF",
+                      "error-container": "#ffdad6",
+                      "primary": "#000000",
+                      "on-secondary-fixed-variant": "#51461e",
+                      "error": "#ba1a1a",
+                      "secondary-fixed-dim": "#d7c692",
+                      "secondary": "#6a5e33",
+                      "on-secondary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-container": "#390c00",
+                      "tertiary-fixed": "#ffdbcf",
+                      "on-secondary-fixed": "#231b00",
+                      "on-error": "#ffffff",
+                      "on-surface": "#1b1c1a",
+                      "surface-bright": "#fbf9f5",
+                      "on-primary-fixed": "#1c1b1b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "80px",
+                      "gutter": "24px",
+                      "base": "8px",
+                      "wizard-width": "640px",
+                      "card-padding": "24px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-sm": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-hero-mobile": [
+                              "Playfair Display"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "display-hero": [
+                              "Playfair Display"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-hero-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-hero": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .custom-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 4px;
+            background: #EAE6DF;
+            outline: none;
+            border-radius: 9999px;
+        }
+        .custom-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #000000;
+            cursor: pointer;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+        }
+        .custom-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #000000;
+            cursor: pointer;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+            border: none;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="hidden md:flex h-screen w-64 fixed left-0 top-0 bg-background dark:bg-surface-container-low border-r border-border-subtle flex-col py-8 px-6 z-50">
+<!-- Brand Header -->
+<div class="mb-12">
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed uppercase tracking-widest">Concierge</h1>
+<p class="font-label-sm text-label-sm text-slate-grey mt-1">Premium Travel AI</p>
+</div>
+<!-- Navigation Links -->
+<ul class="flex-1 space-y-2">
+<li>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-grey font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors duration-200">dashboard</span>
+<span>Dashboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-grey font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors duration-200">timeline</span>
+<span>Timeline</span>
+</a>
+</li>
+<!-- Active Tab -->
+<li>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg bg-surface-container-low text-primary font-bold border-r-2 border-primary transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">fingerprint</span>
+<span>Traveler DNA</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-grey font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors duration-200">explore</span>
+<span>Smart Discovery</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-grey font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors duration-200">payments</span>
+<span>Expense Tracker</span>
+</a>
+</li>
+</ul>
+<!-- Bottom CTA -->
+<div class="mt-auto pt-8">
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-label-md hover:bg-primary-container transition-colors shadow-[0_4px_20px_rgba(0,0,0,0.12)]">
+                New Trip
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-0 md:ml-64 p-6 md:p-gutter max-w-[1600px] mx-auto w-full">
+<!-- Page Header -->
+<header class="mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Traveler DNA</h2>
+<p class="font-body-lg text-body-lg text-slate-grey">Define your unique travel fingerprint to unlock personalized itineraries.</p>
+</header>
+<!-- 2-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+<!-- Left Column: Sliders & Core Preferences (7 columns wide) -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Card: Logistics & Comfort -->
+<section class="bg-surface border border-border-subtle rounded-xl p-card-padding">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Logistics &amp; Comfort</h3>
+<!-- Budget Tier Slider -->
+<div class="mb-8">
+<div class="flex justify-between items-end mb-4">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Budget Tier</label>
+<span class="font-label-sm text-label-sm text-slate-grey">Daily spend per person (excl. flights)</span>
+</div>
+<span class="font-label-md text-label-md text-primary">₹33,250/day</span>
+</div>
+<input class="custom-slider" id="budgetSlider" max="1000" min="100" type="range" value="350"/>
+<div class="flex justify-between mt-2 font-label-sm text-label-sm text-slate-grey">
+<span>Frugal</span>
+<span>Moderate</span>
+<span>Luxury</span>
+</div>
+</div>
+<!-- Luxury Level Slider -->
+<div class="mb-8">
+<div class="flex justify-between items-end mb-4">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Luxury Level</label>
+<span class="font-label-sm text-label-sm text-slate-grey">Accommodation &amp; Dining focus</span>
+</div>
+<span class="font-label-md text-label-md text-primary">Premium</span>
+</div>
+<input class="custom-slider" id="luxurySlider" max="5" min="1" type="range" value="4"/>
+<div class="flex justify-between mt-2 font-label-sm text-label-sm text-slate-grey">
+<span>Standard</span>
+<span>Boutique</span>
+<span>Ultra-Luxe</span>
+</div>
+</div>
+<!-- Max Walk Slider -->
+<div>
+<div class="flex justify-between items-end mb-4">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Max Daily Walk</label>
+<span class="font-label-sm text-label-sm text-slate-grey">Comfortable walking distance per day</span>
+</div>
+<span class="font-label-md text-label-md text-primary">8 km</span>
+</div>
+<input class="custom-slider" id="walkSlider" max="20" min="1" type="range" value="8"/>
+<div class="flex justify-between mt-2 font-label-sm text-label-sm text-slate-grey">
+<span>Light (1km)</span>
+<span>Active (10km)</span>
+<span>Hiker (20km+)</span>
+</div>
+</div>
+</section>
+<!-- Card: Pacing & Environment -->
+<section class="bg-surface border border-border-subtle rounded-xl p-card-padding">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Pacing &amp; Environment</h3>
+<!-- Wake Time Selector -->
+<div class="mb-8">
+<label class="block font-label-md text-label-md text-primary mb-2">Earliest Wake Time</label>
+<p class="font-label-sm text-label-sm text-slate-grey mb-4">When are you ready to start exploring?</p>
+<div class="relative">
+<select class="w-full bg-surface-bright border-b border-primary border-t-0 border-x-0 rounded-none py-3 px-0 font-body-md text-primary focus:ring-0 focus:border-primary appearance-none cursor-pointer">
+<option>6:00 AM - Sunrise Seeker</option>
+<option>7:30 AM - Early Bird</option>
+<option selected="">9:00 AM - Standard Start</option>
+<option>10:30 AM - Leisurely Morning</option>
+<option>12:00 PM - Night Owl</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-slate-grey">expand_more</span>
+</div>
+</div>
+<!-- Crowd Tolerance Segments -->
+<div>
+<label class="block font-label-md text-label-md text-primary mb-2">Crowd Tolerance</label>
+<p class="font-label-sm text-label-sm text-slate-grey mb-4">How do you feel about popular, busy tourist spots?</p>
+<div class="flex bg-surface-container-high rounded-lg p-1">
+<button class="flex-1 py-2 px-4 rounded-md font-label-md text-label-md text-slate-grey hover:bg-surface-variant transition-colors">Low</button>
+<button class="flex-1 py-2 px-4 rounded-md font-label-md text-label-md bg-surface text-primary shadow-sm border border-border-subtle transition-colors">Medium</button>
+<button class="flex-1 py-2 px-4 rounded-md font-label-md text-label-md text-slate-grey hover:bg-surface-variant transition-colors">High</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Tags & Save Action (5 columns wide) -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Card: Interests & Tags -->
+<section class="bg-surface border border-border-subtle rounded-xl p-card-padding">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Interests &amp; Vibes</h3>
+<p class="font-label-sm text-label-sm text-slate-grey mb-6">Select the tags that define your perfect trip.</p>
+<div class="flex flex-wrap gap-2">
+<!-- Active Tags (Champagne pill) -->
+<button class="bg-champagne text-primary px-4 py-2 rounded-full font-label-sm text-label-sm border border-champagne hover:bg-secondary-fixed-dim transition-colors">Photography</button>
+<button class="bg-champagne text-primary px-4 py-2 rounded-full font-label-sm text-label-sm border border-champagne hover:bg-secondary-fixed-dim transition-colors">Specialty Coffee</button>
+<button class="bg-champagne text-primary px-4 py-2 rounded-full font-label-sm text-label-sm border border-champagne hover:bg-secondary-fixed-dim transition-colors">Fine Dining</button>
+<!-- Inactive Tags (Outline pill) -->
+<button class="bg-transparent text-slate-grey px-4 py-2 rounded-full font-label-sm text-label-sm border border-border-subtle hover:border-slate-grey transition-colors">Anime &amp; Manga</button>
+<button class="bg-transparent text-slate-grey px-4 py-2 rounded-full font-label-sm text-label-sm border border-border-subtle hover:border-slate-grey transition-colors">Modern Art</button>
+<button class="bg-transparent text-slate-grey px-4 py-2 rounded-full font-label-sm text-label-sm border border-border-subtle hover:border-slate-grey transition-colors">History Buff</button>
+<button class="bg-transparent text-slate-grey px-4 py-2 rounded-full font-label-sm text-label-sm border border-border-subtle hover:border-slate-grey transition-colors">Nightlife</button>
+<button class="bg-transparent text-slate-grey px-4 py-2 rounded-full font-label-sm text-label-sm border border-border-subtle hover:border-slate-grey transition-colors">Nature Trails</button>
+<button class="bg-transparent text-slate-grey px-4 py-2 rounded-full font-label-sm text-label-sm border border-border-subtle hover:border-slate-grey transition-colors">Street Food</button>
+<button class="bg-transparent text-slate-grey px-4 py-2 rounded-full font-label-sm text-label-sm border border-border-subtle hover:border-slate-grey transition-colors">Architecture</button>
+</div>
+</section>
+<!-- Card: Lifestyle Rules -->
+<section class="bg-surface border border-border-subtle rounded-xl p-card-padding">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Lifestyle Rules</h3>
+<p class="font-label-sm text-label-sm text-slate-grey mb-6">Hard requirements for your itinerary.</p>
+<div class="space-y-4">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center">
+<input checked="" class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-outline checked:border-primary checked:bg-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-on-primary text-[16px] opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="font-body-md text-body-md text-primary group-hover:text-slate-grey transition-colors">Vegetarian Only</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center">
+<input class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-outline checked:border-primary checked:bg-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-on-primary text-[16px] opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="font-body-md text-body-md text-primary group-hover:text-slate-grey transition-colors">No Early Flights (Before 8AM)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center">
+<input checked="" class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-outline checked:border-primary checked:bg-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-on-primary text-[16px] opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="font-body-md text-body-md text-primary group-hover:text-slate-grey transition-colors">Must have Gym/Fitness Center</span>
+</label>
+</div>
+</section>
+<!-- Action Button -->
+<div class="pt-4 sticky bottom-6">
+<button class="w-full bg-primary text-on-primary py-4 px-6 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-[0_4px_20px_rgba(0,0,0,0.12)] flex items-center justify-center gap-2">
+                        SAVE PREFERENCES
+                        <span class="material-symbols-outlined text-[20px]">save</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom NavBar (Visible only on mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full bg-surface dark:bg-surface-container border-t border-border-subtle flex justify-around items-center py-3 px-2 z-50">
+<a class="flex flex-col items-center p-2 text-slate-grey hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">dashboard</span>
+<span class="font-label-sm text-[10px]">Dashboard</span>
+</a>
+<a class="flex flex-col items-center p-2 text-slate-grey hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">timeline</span>
+<span class="font-label-sm text-[10px]">Timeline</span>
+</a>
+<a class="flex flex-col items-center p-2 text-primary" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">fingerprint</span>
+<span class="font-label-sm text-[10px] font-bold">DNA</span>
+</a>
+<a class="flex flex-col items-center p-2 text-slate-grey hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">explore</span>
+<span class="font-label-sm text-[10px]">Discovery</span>
+</a>
+<a class="flex flex-col items-center p-2 text-slate-grey hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">payments</span>
+<span class="font-label-sm text-[10px]">Expense</span>
+</a>
+</nav>
+<script>
+        // Simple slider value updater for demo purposes
+        document.getElementById('budgetSlider').addEventListener('input', function(e) {
+            this.previousElementSibling.querySelector('span').textContent = '₹' + e.target.value + '/day';
+        });
+        
+        const luxuryLabels = ['Basic', 'Standard', 'Premium', 'Boutique', 'Ultra-Luxe'];
+        document.getElementById('luxurySlider').addEventListener('input', function(e) {
+            this.previousElementSibling.querySelector('span').textContent = luxuryLabels[e.target.value - 1];
+        });
+
+        document.getElementById('walkSlider').addEventListener('input', function(e) {
+            this.previousElementSibling.querySelector('span').textContent = e.target.value + ' km';
+        });
+    </script>
+</body></html>

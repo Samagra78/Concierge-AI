@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Concierge Luxury Travel - Onboarding Step 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "champagne": "#E8D8B0",
+                        "secondary-fixed-dim": "#d7c692",
+                        "slate-grey": "#5C6470",
+                        "on-background": "#1b1c1a",
+                        "surface-dim": "#dbdad6",
+                        "primary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#802a05",
+                        "surface-bright": "#fbf9f5",
+                        "tertiary-fixed-dim": "#ffb59c",
+                        "on-primary-fixed-variant": "#474746",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e4e2de",
+                        "surface-tint": "#5f5e5e",
+                        "inverse-on-surface": "#f2f0ed",
+                        "on-tertiary-container": "#d0643d",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#51461e",
+                        "outline-variant": "#c4c7c7",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#FFFFFF",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#f4e2ac",
+                        "border-subtle": "#EAE6DF",
+                        "error": "#ba1a1a",
+                        "primary": "#000000",
+                        "tertiary-container": "#390c00",
+                        "on-primary-container": "#858383",
+                        "on-error-container": "#93000a",
+                        "secondary": "#6a5e33",
+                        "emerald-muted": "#4A7C59",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-secondary-fixed": "#231b00",
+                        "on-surface-variant": "#444748",
+                        "outline": "#747878",
+                        "tertiary-fixed": "#ffdbcf",
+                        "tertiary": "#000000",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-high": "#eae8e4",
+                        "surface-container": "#efeeea",
+                        "surface-variant": "#e4e2de",
+                        "secondary-container": "#f4e2ac",
+                        "background": "#fbf9f5",
+                        "on-tertiary-fixed": "#390c00",
+                        "inverse-surface": "#30312e",
+                        "on-surface": "#1b1c1a",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#1c1b1b",
+                        "surface-container-low": "#f5f3ef",
+                        "on-secondary-container": "#706438"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "section-gap": "80px",
+                        "card-padding": "24px",
+                        "wizard-width": "640px",
+                        "gutter": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-hero-mobile": ["Playfair Display"],
+                        "display-hero": ["Playfair Display"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                        "display-hero-mobile": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                        "display-hero": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .whisper-shadow {
+            box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.12);
+        }
+        
+        /* Custom Range Slider Styling */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #000000;
+            cursor: pointer;
+            margin-top: -8px;
+            border: 2px solid #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #EAE6DF;
+            border-radius: 2px;
+        }
+        input[type=range]:focus {
+            outline: none;
+        }
+        
+        /* Butter Gold Progress Dots */
+        .progress-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #EAE6DF;
+            transition: all 0.3s ease;
+        }
+        .progress-dot.active {
+            background-color: #f4e2ac; /* secondary-fixed / Butter Gold */
+            width: 24px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 font-body-md text-on-background">
+<!-- Main Container - Wizard Width -->
+<main class="w-full max-w-wizard-width mx-auto">
+<!-- Header / Progress -->
+<header class="text-center mb-10">
+<h1 class="font-headline-md text-headline-md text-primary mb-6">Traveler DNA</h1>
+<!-- Progress Indicator -->
+<div aria-label="Progress" class="flex justify-center items-center space-x-3 mb-2">
+<div class="progress-dot"></div>
+<div aria-current="step" class="progress-dot active"></div>
+<div class="progress-dot"></div>
+<div class="progress-dot"></div>
+<div class="progress-dot"></div>
+</div>
+<p class="font-label-sm text-label-sm text-slate-grey uppercase tracking-widest mt-4">Step 2 of 5: Logistics &amp; Pacing</p>
+</header>
+<!-- Surface Card -->
+<div class="bg-surface border border-border-subtle rounded-xl p-card-padding whisper-shadow">
+<form action="#" class="space-y-section-gap" method="POST" style="--section-gap: 40px;">
+<!-- Budget Tier -->
+<div class="space-y-4">
+<div class="flex justify-between items-baseline">
+<label class="font-label-md text-label-md text-primary" for="budget">Daily Budget Tier</label>
+<span class="font-label-sm text-label-sm text-slate-grey" id="budget-val">Premium (₹19,000–₹47,500)</span>
+</div>
+<div class="relative pt-2">
+<input aria-valuemax="4" aria-valuemin="1" aria-valuenow="3" class="w-full" id="budget" max="4" min="1" name="budget" oninput="document.getElementById('budget-val').innerText = ['Economy (Under ₹9,500)', 'Comfort (₹9,500–₹19,000)', 'Premium (₹19,000–₹47,500)', 'Luxury (₹47,500+)'][this.value-1]" type="range" value="3"/>
+<div class="flex justify-between text-xs text-slate-grey mt-2 px-1">
+<span>₹</span>
+<span>₹₹</span>
+<span>₹₹₹</span>
+<span>₹₹₹₹</span>
+</div>
+</div>
+</div>
+<!-- Luxury Level -->
+<div class="space-y-4">
+<div class="flex justify-between items-baseline">
+<label class="font-label-md text-label-md text-primary" for="luxury">Pacing &amp; Flexibility</label>
+<span class="font-label-sm text-label-sm text-slate-grey" id="luxury-val">Balanced</span>
+</div>
+<div class="relative pt-2">
+<input class="w-full" id="luxury" max="3" min="1" name="luxury" oninput="document.getElementById('luxury-val').innerText = ['Rigid/Packed', 'Balanced', 'Spontaneous/Relaxed'][this.value-1]" type="range" value="2"/>
+<div class="flex justify-between text-xs text-slate-grey mt-2 px-1">
+<span>Packed</span>
+<span>Balanced</span>
+<span>Relaxed</span>
+</div>
+</div>
+</div>
+<!-- Max Walk -->
+<div class="space-y-4">
+<div class="flex justify-between items-baseline">
+<label class="font-label-md text-label-md text-primary" for="walk">Max Daily Walking</label>
+<span class="font-label-sm text-label-sm text-slate-grey"><span id="walk-val">10</span> km</span>
+</div>
+<div class="relative pt-2">
+<input class="w-full" id="walk" max="25" min="2" name="walk" oninput="document.getElementById('walk-val').innerText = this.value" type="range" value="10"/>
+<div class="flex justify-between text-xs text-slate-grey mt-2 px-1">
+<span>Light (2km)</span>
+<span>Explorer (25km+)</span>
+</div>
+</div>
+</div>
+<!-- Wake Time Selector -->
+<div class="space-y-4">
+<label class="font-label-md text-label-md text-primary block">Earliest Ideal Wake Time</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<!-- Option 1 -->
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="wake_time" type="radio" value="early"/>
+<div class="p-4 border border-border-subtle rounded-lg text-center transition-all peer-checked:bg-secondary-fixed peer-checked:border-secondary peer-hover:bg-surface-container-low">
+<span class="material-symbols-outlined block text-primary mb-2" style="font-variation-settings: 'FILL' 0;">wb_twilight</span>
+<span class="font-label-sm text-label-sm text-primary">Early Bird</span>
+<span class="block text-xs text-slate-grey mt-1">Before 7AM</span>
+</div>
+</label>
+<!-- Option 2 -->
+<label class="cursor-pointer relative">
+<input checked="" class="peer sr-only" name="wake_time" type="radio" value="standard"/>
+<div class="p-4 border border-border-subtle rounded-lg text-center transition-all peer-checked:bg-secondary-fixed peer-checked:border-secondary peer-hover:bg-surface-container-low">
+<span class="material-symbols-outlined block text-primary mb-2" style="font-variation-settings: 'FILL' 0;">light_mode</span>
+<span class="font-label-sm text-label-sm text-primary">Standard</span>
+<span class="block text-xs text-slate-grey mt-1">7AM - 9AM</span>
+</div>
+</label>
+<!-- Option 3 -->
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="wake_time" type="radio" value="late"/>
+<div class="p-4 border border-border-subtle rounded-lg text-center transition-all peer-checked:bg-secondary-fixed peer-checked:border-secondary peer-hover:bg-surface-container-low">
+<span class="material-symbols-outlined block text-primary mb-2" style="font-variation-settings: 'FILL' 0;">coffee</span>
+<span class="font-label-sm text-label-sm text-primary">Late Riser</span>
+<span class="block text-xs text-slate-grey mt-1">9AM - 11AM</span>
+</div>
+</label>
+<!-- Option 4 -->
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="wake_time" type="radio" value="night"/>
+<div class="p-4 border border-border-subtle rounded-lg text-center transition-all peer-checked:bg-secondary-fixed peer-checked:border-secondary peer-hover:bg-surface-container-low">
+<span class="material-symbols-outlined block text-primary mb-2" style="font-variation-settings: 'FILL' 0;">bedtime</span>
+<span class="font-label-sm text-label-sm text-primary">Night Owl</span>
+<span class="block text-xs text-slate-grey mt-1">After 11AM</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex justify-between items-center pt-6 border-t border-border-subtle mt-10">
+<button class="px-6 py-3 border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-surface-container-low transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary bg-transparent" type="button">
+                        Back
+                    </button>
+<button class="px-8 py-3 bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:bg-inverse-surface transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-sm flex items-center group" type="button">
+                        Continue
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</main>
+</body></html>

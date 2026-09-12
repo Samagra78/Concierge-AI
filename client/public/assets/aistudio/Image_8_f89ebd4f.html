@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smart Itinerary - Day 3: Tokyo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#390c00",
+                    "surface-container": "#efeeea",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#444748",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "surface-tint": "#5f5e5e",
+                    "on-background": "#1b1c1a",
+                    "outline": "#747878",
+                    "secondary-fixed": "#f4e2ac",
+                    "surface-container-highest": "#e4e2de",
+                    "on-primary-container": "#858383",
+                    "on-tertiary-fixed-variant": "#802a05",
+                    "champagne": "#E8D8B0",
+                    "slate-grey": "#5C6470",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f5f3ef",
+                    "surface-dim": "#dbdad6",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#f4e2ac",
+                    "outline-variant": "#c4c7c7",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-secondary-container": "#706438",
+                    "surface-variant": "#e4e2de",
+                    "surface": "#FFFFFF",
+                    "emerald-muted": "#4A7C59",
+                    "inverse-surface": "#30312e",
+                    "tertiary-fixed-dim": "#ffb59c",
+                    "tertiary": "#000000",
+                    "primary-fixed": "#e5e2e1",
+                    "on-tertiary-container": "#d0643d",
+                    "inverse-primary": "#c8c6c5",
+                    "primary-container": "#1c1b1b",
+                    "background": "#fbf9f5",
+                    "inverse-on-surface": "#f2f0ed",
+                    "surface-container-high": "#eae8e4",
+                    "border-subtle": "#EAE6DF",
+                    "error-container": "#ffdad6",
+                    "primary": "#000000",
+                    "on-secondary-fixed-variant": "#51461e",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#d7c692",
+                    "secondary": "#6a5e33",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#390c00",
+                    "tertiary-fixed": "#ffdbcf",
+                    "on-secondary-fixed": "#231b00",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1b1c1a",
+                    "surface-bright": "#fbf9f5",
+                    "on-primary-fixed": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "wizard-width": "640px",
+                    "card-padding": "24px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "body-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label-sm": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "display-hero-mobile": [
+                            "Playfair Display"
+                    ],
+                    "headline-md": [
+                            "Playfair Display"
+                    ],
+                    "headline-sm": [
+                            "Playfair Display"
+                    ],
+                    "display-hero": [
+                            "Playfair Display"
+                    ],
+                    "headline-lg": [
+                            "Playfair Display"
+                    ],
+                    "body-md": [
+                            "Plus Jakarta Sans"
+                    ]
+            },
+            "fontSize": {
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-hero-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "48px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-sm": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-hero": [
+                            "64px",
+                            {
+                                    "lineHeight": "72px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "40px",
+                            {
+                                    "lineHeight": "48px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+        }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased flex flex-col md:flex-row min-h-screen">
+<!-- SideNavBar -->
+<nav class="hidden md:flex bg-background dark:bg-surface-container-low h-screen w-64 fixed left-0 top-0 border-r border-border-subtle flex-col py-8 px-6 z-50">
+<div class="mb-12">
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed uppercase tracking-widest">Concierge</h1>
+<p class="font-label-sm text-label-sm text-slate-grey mt-1">Premium Travel AI</p>
+</div>
+<ul class="flex-1 space-y-2">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-grey font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-primary font-bold border-r-2 border-primary bg-surface-container-low transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="timeline">timeline</span>
+                    Timeline
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-grey font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="fingerprint">fingerprint</span>
+                    Traveler DNA
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-grey font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+                    Smart Discovery
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-grey font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+                    Expense Tracker
+                </a>
+</li>
+</ul>
+<div class="mt-auto">
+<button class="w-full bg-primary text-on-primary py-3 px-4 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors duration-200 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                New Trip
+            </button>
+<div class="mt-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A sophisticated close-up portrait of a traveler in an elegant airport lounge, soft natural light, minimalist warm aesthetic, premium travel mood, high resolution, editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXec_EY9lx0lGKANnPXuQv9ao70sih1PuXUDEUlAw82MIBysX8oBAE7y_Gd8dsotY4G585CrQkiy5dXsK7HZh1-R-NULSLnW_08vW8hDLhQM8wMcIQS7F51bQViDfXdvX4b5-95hZtCjE5yfd8YWAneSIHFRvCKJNAiHoA-H7Qz-JpOkwNWelhoaNetqpNZYjPzYJJVKREIPcYnbl1L1xVgkIxE-5Lt7pMMi_mnnA6w_142yNSCIqAcA"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md text-on-background truncate">J. Doe</p>
+<p class="font-label-sm text-label-sm text-slate-grey truncate">View Profile</p>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 md:ml-64 relative min-h-screen">
+<!-- Header -->
+<header class="sticky top-0 z-40 bg-background/90 backdrop-blur-md border-b border-border-subtle px-gutter py-6">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 text-slate-grey mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider">Day 3</span>
+<span class="w-1 h-1 rounded-full bg-slate-grey"></span>
+<span class="font-label-md text-label-md">Oct 14, 2024</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Tokyo: Tradition &amp; Tech</h2>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded border border-border-subtle text-primary font-label-md text-label-md hover:bg-surface-container-low transition-colors bg-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+                        Preferences
+                    </button>
+<button class="px-4 py-2 rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">share</span>
+                        Share Day
+                    </button>
+</div>
+</div>
+</header>
+<!-- Timeline Container -->
+<div class="px-gutter py-section-gap max-w-container-max mx-auto">
+<div class="max-w-[800px] mx-auto relative">
+<!-- Timeline Line -->
+<div class="absolute left-[39px] top-4 bottom-4 w-px bg-border-subtle hidden sm:block"></div>
+<div class="space-y-8 relative z-10">
+<!-- Slot 1: Morning Activity -->
+<div class="flex flex-col sm:flex-row gap-6 items-start group">
+<div class="sm:w-24 flex-shrink-0 flex sm:flex-col items-center sm:items-end gap-2 pt-1">
+<span class="font-label-md text-label-md text-primary">09:00 AM</span>
+<div class="w-3 h-3 rounded-full bg-emerald-muted hidden sm:block border-4 border-background absolute left-[35px]"></div>
+</div>
+<div class="flex-1 w-full bg-surface border border-border-subtle rounded-xl p-card-padding hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="inline-block px-2 py-1 rounded bg-champagne text-tertiary-container font-label-sm text-label-sm mb-2">Culture</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Senso-ji Temple Visit</h3>
+</div>
+<button class="w-10 h-10 rounded-full bg-emerald-muted/10 text-emerald-muted flex items-center justify-center hover:bg-emerald-muted/20 transition-colors">
+<span class="material-symbols-outlined" data-icon="lock" data-weight="fill">lock</span>
+</button>
+</div>
+<div class="flex flex-col md:flex-row gap-4">
+<div class="w-full md:w-32 h-24 rounded-lg overflow-hidden flex-shrink-0 relative">
+<img alt="Senso-ji Temple" class="w-full h-full object-cover" data-alt="A serene morning view of Senso-ji Temple in Tokyo, soft morning sunlight illuminating the red lanterns, few people around, warm minimalistic photography style, premium editorial travel feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhBYYOeHPvnMKbWuhhDYSbfCicJoPaTwLnjlyEP3BO6hGfO5sJNoR0SnWaT0qGzGeUmxA3feZsPpi3r5KdFC2x0prlF3lnsx1I2fB3rsBCElWecBS9odafRGLbxu18Ra54k4Jj_QgW2HDOoeFVlkJPBv7Op1jDsR1mwBdIb9Q1fvYR5kHKomPp1L3vUKJuEL7SQxPnKA5QAv4oYYyvrTIqUtF5n8wu6Y9Ch_6UaCp41vxHqBI-RRfF0w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Explore Tokyo's oldest Buddhist temple. Early arrival recommended to avoid crowds and experience the tranquil atmosphere of Asakusa.</p>
+<div class="flex items-center gap-4 mt-4 pt-4 border-t border-border-subtle">
+<div class="flex items-center gap-1 text-slate-grey font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                                            2 hrs
+                                        </div>
+<div class="flex items-center gap-1 text-slate-grey font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+                                            Free entry
+                                        </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Transit Card -->
+<div class="flex flex-col sm:flex-row gap-6 items-center pl-0 sm:pl-[120px]">
+<div class="w-full bg-surface-container-low rounded-lg py-3 px-4 border border-border-subtle border-dashed flex items-center justify-between text-slate-grey">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">train</span>
+<span class="font-label-md text-label-md">Ginza Line to Shibuya</span>
+</div>
+<span class="font-label-sm text-label-sm">30 mins • ¥200</span>
+</div>
+</div>
+<!-- Slot 2: Lunch -->
+<div class="flex flex-col sm:flex-row gap-6 items-start group">
+<div class="sm:w-24 flex-shrink-0 flex sm:flex-col items-center sm:items-end gap-2 pt-1">
+<span class="font-label-md text-label-md text-primary">12:30 PM</span>
+<div class="w-3 h-3 rounded-full bg-border-subtle hidden sm:block border-4 border-background absolute left-[35px]"></div>
+</div>
+<div class="flex-1 w-full bg-surface border border-border-subtle rounded-xl p-card-padding hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="inline-block px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm mb-2">Foodie</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Sushi Dai Omakase</h3>
+</div>
+<button class="w-10 h-10 rounded-full border border-border-subtle text-slate-grey flex items-center justify-center hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" data-icon="lock_open">lock_open</span>
+</button>
+</div>
+<div class="flex flex-col md:flex-row gap-4">
+<div class="w-full md:w-32 h-24 rounded-lg overflow-hidden flex-shrink-0 relative">
+<img alt="Sushi Dai" class="w-full h-full object-cover" data-alt="Close up of premium omakase sushi on a minimalist wooden counter, warm ambient lighting, highly detailed textures, high-end culinary photography, modern editorial luxury travel aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCimBbi24NbC6YB-VHzWH2mLmxdEAsM9IRkTuVOBQI9rtKCJ5ZwZhlSV-_PdVVyKoouLxXvsbUaX9GrHoaf80vglDuC5AR-EHOlz1Maa2nhid6iOqCIouRoxbwUAwkz-t41VTkXnAm5wGgwVd8rfaIHw3JcSY746uzSa6BsN1KSymPjuZtbCViCkxbC_mLTXvBXRdHpntPcIxocVwpBHHffN-8QmoEjoAAyvLaDMEtqWRRj_O-V-MdbFQ"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Premium sushi experience in Toyosu. Reservation required well in advance. Chef's selection based on seasonal catch.</p>
+<div class="flex items-center justify-between mt-4 pt-4 border-t border-border-subtle">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1 text-slate-grey font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                                                1.5 hrs
+                                            </div>
+<div class="flex items-center gap-1 text-slate-grey font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+                                                $$$$
+                                            </div>
+</div>
+<button class="px-3 py-1.5 rounded border border-border-subtle text-primary font-label-sm text-label-sm hover:bg-surface-container-low transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+                                            Replan Slot
+                                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Transit Card -->
+<div class="flex flex-col sm:flex-row gap-6 items-center pl-0 sm:pl-[120px]">
+<div class="w-full bg-surface-container-low rounded-lg py-3 px-4 border border-border-subtle border-dashed flex items-center justify-between text-slate-grey">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">directions_walk</span>
+<span class="font-label-md text-label-md">Walk to teamLab</span>
+</div>
+<span class="font-label-sm text-label-sm">15 mins</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

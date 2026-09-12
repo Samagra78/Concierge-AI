@@ -1,0 +1,21 @@
+Sep 12 - start , scaffold, 
+sep 13 - geoapify  , webcrawler 
+sep 26 - orchestration
+oct 10 - auth, routes
+oct 11 - frontend
+oct 13 - prompt refining
+oct 14 - gemini service
+oct 31 - guardrails
+nov 1 - models, 
+nov 2 - Agents
+
+
+People:
+user.name = Tanuj-A06
+user.email = tanuj.adarkar06@gmail.com
+
+user.name = Samagra78
+user.email = 185402698+Samagra78@users.noreply.github.com
+
+user.name = Voidyy-09
+user.email = dharshanadimulam10ixa@gmail.com

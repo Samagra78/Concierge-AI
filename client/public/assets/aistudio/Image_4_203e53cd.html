@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Concierge - Premium Travel AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-tertiary-fixed": "#390c00",
+                            "surface-container": "#efeeea",
+                            "on-primary": "#ffffff",
+                            "on-surface-variant": "#444748",
+                            "primary-fixed-dim": "#c8c6c5",
+                            "surface-tint": "#5f5e5e",
+                            "on-background": "#1b1c1a",
+                            "outline": "#747878",
+                            "secondary-fixed": "#f4e2ac",
+                            "surface-container-highest": "#e4e2de",
+                            "on-primary-container": "#858383",
+                            "on-tertiary-fixed-variant": "#802a05",
+                            "champagne": "#E8D8B0",
+                            "slate-grey": "#5C6470",
+                            "on-error-container": "#93000a",
+                            "surface-container-low": "#f5f3ef",
+                            "surface-dim": "#dbdad6",
+                            "on-tertiary": "#ffffff",
+                            "secondary-container": "#f4e2ac",
+                            "outline-variant": "#c4c7c7",
+                            "on-primary-fixed-variant": "#474746",
+                            "on-secondary-container": "#706438",
+                            "surface-variant": "#e4e2de",
+                            "surface": "#FFFFFF",
+                            "emerald-muted": "#4A7C59",
+                            "inverse-surface": "#30312e",
+                            "tertiary-fixed-dim": "#ffb59c",
+                            "tertiary": "#000000",
+                            "primary-fixed": "#e5e2e1",
+                            "on-tertiary-container": "#d0643d",
+                            "inverse-primary": "#c8c6c5",
+                            "primary-container": "#1c1b1b",
+                            "background": "#fbf9f5",
+                            "inverse-on-surface": "#f2f0ed",
+                            "surface-container-high": "#eae8e4",
+                            "border-subtle": "#EAE6DF",
+                            "error-container": "#ffdad6",
+                            "primary": "#000000",
+                            "on-secondary-fixed-variant": "#51461e",
+                            "error": "#ba1a1a",
+                            "secondary-fixed-dim": "#d7c692",
+                            "secondary": "#6a5e33",
+                            "on-secondary": "#ffffff",
+                            "surface-container-lowest": "#ffffff",
+                            "tertiary-container": "#390c00",
+                            "tertiary-fixed": "#ffdbcf",
+                            "on-secondary-fixed": "#231b00",
+                            "on-error": "#ffffff",
+                            "on-surface": "#1b1c1a",
+                            "surface-bright": "#fbf9f5",
+                            "on-primary-fixed": "#1c1b1b"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "section-gap": "80px",
+                            "gutter": "24px",
+                            "base": "8px",
+                            "wizard-width": "640px",
+                            "card-padding": "24px",
+                            "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                            "body-lg": [
+                                    "Plus Jakarta Sans"
+                            ],
+                            "label-md": [
+                                    "Plus Jakarta Sans"
+                            ],
+                            "label-sm": [
+                                    "Plus Jakarta Sans"
+                            ],
+                            "display-hero-mobile": [
+                                    "Playfair Display"
+                            ],
+                            "headline-md": [
+                                    "Playfair Display"
+                            ],
+                            "headline-sm": [
+                                    "Playfair Display"
+                            ],
+                            "display-hero": [
+                                    "Playfair Display"
+                            ],
+                            "headline-lg": [
+                                    "Playfair Display"
+                            ],
+                            "body-md": [
+                                    "Plus Jakarta Sans"
+                            ]
+                    },
+                    "fontSize": {
+                            "body-lg": [
+                                    "18px",
+                                    {
+                                            "lineHeight": "28px",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "label-md": [
+                                    "14px",
+                                    {
+                                            "lineHeight": "20px",
+                                            "letterSpacing": "0.02em",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "label-sm": [
+                                    "12px",
+                                    {
+                                            "lineHeight": "16px",
+                                            "letterSpacing": "0.05em",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "display-hero-mobile": [
+                                    "40px",
+                                    {
+                                            "lineHeight": "48px",
+                                            "fontWeight": "700"
+                                    }
+                            ],
+                            "headline-md": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "40px",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "headline-sm": [
+                                    "24px",
+                                    {
+                                            "lineHeight": "32px",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "display-hero": [
+                                    "64px",
+                                    {
+                                            "lineHeight": "72px",
+                                            "letterSpacing": "-0.02em",
+                                            "fontWeight": "700"
+                                    }
+                            ],
+                            "headline-lg": [
+                                    "40px",
+                                    {
+                                            "lineHeight": "48px",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "body-md": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "24px",
+                                            "fontWeight": "400"
+                                    }
+                            ]
+                    }
+            },
+                },
+        }
+    </script>
+<style>
+        .whisper-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.12);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-champagne selection:text-primary">
+<!-- Sticky Nav -->
+<nav class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-sm border-b border-border-subtle transition-all duration-300" id="main-nav">
+<div class="max-w-container-max mx-auto px-gutter h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="explore" data-weight="fill" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-headline-sm text-headline-sm text-primary uppercase tracking-widest">Concierge</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-slate-grey hover:text-primary transition-colors" href="#how-it-works">How it Works</a>
+<a class="font-label-md text-label-md text-slate-grey hover:text-primary transition-colors" href="#features">Features</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors" href="#">Sign In</a>
+<a class="bg-primary text-on-primary px-6 py-2 rounded font-label-md text-label-md hover:bg-on-surface-variant transition-colors" href="#">Start Planning</a>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-40 pb-section-gap px-gutter relative overflow-hidden flex items-center min-h-[921px]">
+<div class="max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col gap-8">
+<h1 class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero text-primary">
+                    Your next trip, planned like it was designed by someone who actually knows you.
+                </h1>
+<p class="font-body-lg text-body-lg text-slate-grey max-w-xl">
+                    Experience the perfect blend of artificial intelligence and curated luxury. We craft bespoke itineraries that match your Traveler DNA, handling the logistics so you can focus on the journey.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded font-label-md text-label-md hover:bg-on-surface-variant transition-colors" href="#">
+                        Start Planning Free
+                    </a>
+<a class="inline-flex items-center justify-center bg-transparent text-on-tertiary-container border border-on-tertiary-container px-8 py-4 rounded font-label-md text-label-md hover:bg-on-tertiary-container hover:text-on-primary transition-colors" href="#">
+                        See a Sample Itinerary
+                    </a>
+</div>
+<div class="flex items-center gap-4 mt-8 pt-8 border-t border-border-subtle">
+<div class="flex -space-x-4">
+<img class="w-12 h-12 rounded-full border-2 border-surface object-cover" data-alt="A portrait of a sophisticated traveler in a modern setting, light mode aesthetic, soft lighting, premium feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2qMXF1dd3gj_C4YIvZ9Z8GeXJmKMKhNHCCf5wTr-ryJ_NTNyXt4uCiyG5llD5tzai-HfshhSJGalnHc_CsB5UvHfZl30tUwP2l3m3LRj413UNkcu6iD2IflipIHIVelobTNBtVpdViAFOVim_BimwOheAyS7ikGWCsBaGBTzXLnZ4jRXvmuoDUxMe9eTDxgA5r9dIcInCit2nTTj8Ujw9E-H1YVD-lZG9orTRJanD8dy7GjJbmH-l-g"/>
+<img class="w-12 h-12 rounded-full border-2 border-surface object-cover" data-alt="A portrait of a happy traveler in a bright European street, light mode aesthetic, sunny day, editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqo-rTLA7ahTcBMKnVcW9RwfWbkSXkGWhfFdKanPi1Sy5CbH_yG6bv8A1O4GlEJj_cJN8VK_LPz0eNTlxP3Sw1kzDEFqFOKtOQLmQIu-WoqAwbt5dmrvwAyBuhcxvSdOf746bnX6NggUk8lmAFUVIQ2NDWYu0QNvsKIsgdc_9d7o_6LdLghXHpLqpdtHrBhrytufekTFzs573de0v75QaJRbngguo6wbSkoSYH707J-UtGIIiu_DLAWA"/>
+<img class="w-12 h-12 rounded-full border-2 border-surface object-cover" data-alt="A portrait of a professional relaxing in a luxury lounge, light mode aesthetic, warm colors, calm mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1CPhvB8aI7AiEAUmLO2D3u9O4hd7Fa4lSnOa583oJSpGzph2SJ92PWMCXfk04Mc6ovGdXbNMsTFHa_opBqCfeq-Aqtdz1Oa4amzWrjzwku8cPlOKAwX2dFUtc9ihWoPNLcr6aF1LFggPr-F6sBN73Ut85MReYGBFRHBxN3M10Szi3U2-OfxwmEEJj6OgwOLK5Wb2tYiQlZXihGgX1yEKIp0851MKwrT65shmIYXhwYvKp_t1btIOJYw"/>
+</div>
+<div class="font-label-sm text-label-sm text-slate-grey">
+<span class="text-primary font-bold">4.9/5</span> from over 10,000 travelers
+                    </div>
+</div>
+</div>
+<div class="lg:col-span-5 relative hidden lg:block h-[600px] w-full">
+<div class="absolute inset-0 bg-champagne rounded-2xl transform rotate-3 scale-105 opacity-50"></div>
+<img class="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-xl z-10 border border-border-subtle" data-alt="A stunning, high-end editorial photograph of a picturesque coastal town at golden hour. The image features modern, clean lines with a warm, low-contrast foundation. Subtle charcoal accents provide depth. The overall mood is effortless, sophisticated, and curated, evoking a premium travel magazine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpHFCvawS7yD0szvoXS09el6eBAPXULK5u5kZ_7mcEdhVyoqGp7z5b5dOGVOV3FtavLdQjlhftH-eNTA_8g2NqsDiVbfuo5ZEwXJTDyGu1qdNJa_NPGthoQqpVMYPEe6rVFUf_6jWRnP9dNfjHqSC5SX_LnM7mK8quUNTlhZitr33xsb5JNniEGeFqIV6Erc2pM_AdamLv0XSDqX6IGTlAG3IuusOwOKahXJm77OLADA9PUSecTWrWvA"/>
+</div>
+</div>
+</section>
+<!-- Value Prop Grid -->
+<section class="py-section-gap px-gutter bg-surface" id="features">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Designed for the discerning traveler.</h2>
+<p class="font-body-md text-body-md text-slate-grey">We don't just book flights; we curate experiences based on exactly what makes you tick.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface p-card-padding rounded-xl border border-border-subtle whisper-shadow flex flex-col h-full group hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="fingerprint">fingerprint</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Traveler DNA</h3>
+<p class="font-body-md text-body-md text-slate-grey mb-6 flex-grow">We build a comprehensive profile of your preferences—from your ideal morning coffee spot to your preferred pace of travel—ensuring every recommendation feels instinctively right.</p>
+<div class="flex gap-2 flex-wrap mt-auto">
+<span class="bg-champagne text-primary px-3 py-1 rounded-full font-label-sm text-label-sm">Foodie</span>
+<span class="bg-champagne text-primary px-3 py-1 rounded-full font-label-sm text-label-sm">Boutique Stays</span>
+<span class="bg-champagne text-primary px-3 py-1 rounded-full font-label-sm text-label-sm">Relaxed Pace</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface p-card-padding rounded-xl border border-border-subtle whisper-shadow flex flex-col h-full group hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Smart Discovery</h3>
+<p class="font-body-md text-body-md text-slate-grey flex-grow">Bypass the tourist traps. Our AI analyzes local trends, editorial reviews, and hidden gems to suggest venues and activities that align perfectly with your taste.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface p-card-padding rounded-xl border border-border-subtle whisper-shadow flex flex-col h-full group hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="umbrella">umbrella</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Rain-Swap</h3>
+<p class="font-body-md text-body-md text-slate-grey flex-grow">Weather turned sour? One tap automatically reshuffles your itinerary, substituting outdoor plans for indoor cultural experiences without missing a beat.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface p-card-padding rounded-xl border border-border-subtle whisper-shadow flex flex-col h-full group hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Live Budget</h3>
+<p class="font-body-md text-body-md text-slate-grey flex-grow">Keep your finances effortlessly in check. Real-time expense tracking integrated directly into your itinerary, providing peace of mind as you explore.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works -->
+<section class="py-section-gap px-gutter bg-background border-t border-border-subtle" id="how-it-works">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">How it works</h2>
+<p class="font-body-md text-body-md text-slate-grey">A seamless process designed to take you from daydreaming to departure with zero friction.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+<!-- Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-6 left-1/6 right-1/6 h-px bg-border-subtle z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline-sm text-headline-sm mb-6 shadow-md">1</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Define Your Vibe</h3>
+<p class="font-body-md text-body-md text-slate-grey">Complete a quick, intuitive quiz to establish your Traveler DNA. Tell us what you love, and more importantly, what you don't.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-surface text-primary border border-border-subtle rounded-full flex items-center justify-center font-headline-sm text-headline-sm mb-6 whisper-shadow">2</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Review the Draft</h3>
+<p class="font-body-md text-body-md text-slate-grey">Within seconds, receive a fully fleshed-out itinerary. Tweak it, swap activities, and adjust the pace until it's perfect.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-surface text-primary border border-border-subtle rounded-full flex items-center justify-center font-headline-sm text-headline-sm mb-6 whisper-shadow">3</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Travel Effortlessly</h3>
+<p class="font-body-md text-body-md text-slate-grey">Access your beautifully organized itinerary on your phone. Offline access, live updates, and direct booking links included.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface-container w-full h-auto mt-auto border-t border-border-subtle flex justify-between items-center px-gutter py-6 max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm text-primary">
+            Concierge
+        </div>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-slate-grey hover:text-primary transition-colors cursor-pointer" href="#">Privacy</a>
+<a class="font-label-sm text-label-sm text-slate-grey hover:text-primary transition-colors cursor-pointer" href="#">Terms</a>
+<a class="font-label-sm text-label-sm text-slate-grey hover:text-primary transition-colors cursor-pointer" href="#">Support</a>
+</div>
+<div class="font-label-sm text-label-sm text-slate-grey">
+            © 2024 Concierge Luxury Travel
+        </div>
+</footer>
+<script>
+        // Simple script to handle sticky nav background opacity on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

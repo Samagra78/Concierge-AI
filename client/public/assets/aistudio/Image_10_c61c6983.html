@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Account Profile - Concierge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#ffffff",
+                        "champagne": "#E8D8B0",
+                        "secondary-fixed-dim": "#d7c692",
+                        "slate-grey": "#5C6470",
+                        "on-background": "#1b1c1a",
+                        "surface-dim": "#dbdad6",
+                        "primary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#802a05",
+                        "surface-bright": "#fbf9f5",
+                        "tertiary-fixed-dim": "#ffb59c",
+                        "on-primary-fixed-variant": "#474746",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e4e2de",
+                        "surface-tint": "#5f5e5e",
+                        "inverse-on-surface": "#f2f0ed",
+                        "on-tertiary-container": "#d0643d",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#51461e",
+                        "outline-variant": "#c4c7c7",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#FFFFFF",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#f4e2ac",
+                        "border-subtle": "#EAE6DF",
+                        "error": "#ba1a1a",
+                        "primary": "#000000",
+                        "tertiary-container": "#390c00",
+                        "on-primary-container": "#858383",
+                        "on-error-container": "#93000a",
+                        "secondary": "#6a5e33",
+                        "emerald-muted": "#4A7C59",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-secondary-fixed": "#231b00",
+                        "on-surface-variant": "#444748",
+                        "outline": "#747878",
+                        "tertiary-fixed": "#ffdbcf",
+                        "tertiary": "#000000",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-high": "#eae8e4",
+                        "surface-container": "#efeeea",
+                        "surface-variant": "#e4e2de",
+                        "secondary-container": "#f4e2ac",
+                        "background": "#fbf9f5",
+                        "on-tertiary-fixed": "#390c00",
+                        "inverse-surface": "#30312e",
+                        "on-surface": "#1b1c1a",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#1c1b1b",
+                        "surface-container-low": "#f5f3ef",
+                        "on-secondary-container": "#706438"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        base: "8px",
+                        "section-gap": "80px",
+                        "card-padding": "24px",
+                        "wizard-width": "640px",
+                        "gutter": "24px",
+                        "container-max": "1200px"
+                    },
+                    fontFamily: {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-hero-mobile": ["Playfair Display"],
+                        "display-hero": ["Playfair Display"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    fontSize: {
+                        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }],
+                        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "500" }],
+                        "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "headline-lg": ["40px", { lineHeight: "48px", fontWeight: "600" }],
+                        "display-hero-mobile": ["40px", { lineHeight: "48px", fontWeight: "700" }],
+                        "display-hero": ["64px", { lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "40px", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .whisper-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+        .emerald-badge {
+            background-color: rgba(74, 124, 89, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex">
+<!-- SideNavBar (Shared Component) -->
+<!-- Assuming "Traveler DNA" maps best to a generic settings/profile view if a dedicated 'Profile' tab doesn't exist, though typically Dashboard would be fallback. We'll highlight 'Traveler DNA' as it aligns closest with 'Edit Travel Preferences'. -->
+<nav class="bg-background dark:bg-surface-container-low font-body-md text-body-md h-screen w-64 fixed left-0 top-0 border-r border-border-subtle flex flex-col h-full py-8 px-6 z-50 hidden md:flex">
+<!-- Header -->
+<div class="mb-12">
+<div class="flex items-center gap-3">
+<img alt="User profile" class="w-8 h-8 rounded-full object-cover" data-alt="A minimalist, high-end vector logo of an abstract compass or globe in black on a white background, embodying luxury travel and editorial design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO0rkXRaLXr9hitRfuCgC6DQki__iDHAEs3RV13rgEAxUsL0mXQxmn4B4_snMUlY9Mc7PtwTkAhlOEqhdSBH_JQDwpgcP5gErUQo9QN7KJTZe1Rj6uMWdzufti8aFznPF1UVIVecne5XUqxCR4UypnvMkuGUIMfUuernxi4MghdedL9GdPW6nsBgbQUNrWU0lLNFbLIUWAI6TaVEMZOa5eVg-npGzZIh7CIe8RfyhynoIgqvLdrj1Y9A"/>
+<div>
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed uppercase tracking-widest">Concierge</h1>
+<p class="font-label-sm text-label-sm text-slate-grey">Premium Travel AI</p>
+</div>
+</div>
+</div>
+<!-- Navigation Links -->
+<ul class="flex flex-col gap-2 flex-grow">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-slate-grey font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-slate-grey font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="timeline">timeline</span>
+<span>Timeline</span>
+</a>
+</li>
+<li>
+<!-- Active State -->
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-2 border-primary hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="fingerprint">fingerprint</span>
+<span>Traveler DNA</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-slate-grey font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span>Smart Discovery</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-slate-grey font-medium hover:text-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>Expense Tracker</span>
+</a>
+</li>
+</ul>
+<!-- CTA -->
+<div class="mt-auto">
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-3 px-4 rounded-DEFAULT hover:bg-surface-tint transition-colors duration-200 ease-in-out">
+                New Trip
+            </button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 md:ml-64 p-gutter md:p-section-gap flex flex-col md:flex-row gap-8 max-w-container-max mx-auto w-full">
+<!-- Left Column: Identity Card -->
+<aside class="w-full md:w-1/3 flex flex-col gap-6">
+<div class="bg-surface border border-border-subtle rounded-xl p-card-padding flex flex-col items-center text-center">
+<img alt="Aarav Mehta" class="w-32 h-32 rounded-full object-cover mb-4 whisper-shadow" data-alt="A professional headshot of a well-dressed man named Aarav Mehta, smiling softly against a plain, warm vanilla background. High-quality editorial portrait style with soft, flattering lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqOSlYYTMhzaCh4toWQSkhVxwnqK1Cpdte2-upaRs3D-DYALiY1rbO19oNyB5FJ0liw2TF3Z3Hz15oUvmepUXJhZffTZ8YtZbQDvkzpkafp5LE5PEbxvNqj3mXyrQf0lCMX3bf3J9syg1bFxOzYvIWCklc4j5SvVgK1C-Tq7os6eeG1DAgnWZpMHWA4ktVRCgp_wUskm-PFihooIrU1q7XexWZy4au3kamfuKpk3HvAyKCDBTdRbzCMA"/>
+<h2 class="font-headline-md text-headline-md text-primary mb-1">Aarav Mehta</h2>
+<p class="font-body-md text-body-md text-slate-grey mb-6">World Traveler &amp; Connoisseur</p>
+<div class="flex flex-wrap justify-center gap-2 mb-8">
+<span class="bg-champagne text-primary px-3 py-1 rounded-full font-label-sm text-label-sm">Foodie</span>
+<span class="bg-champagne text-primary px-3 py-1 rounded-full font-label-sm text-label-sm">Architecture</span>
+<span class="bg-champagne text-primary px-3 py-1 rounded-full font-label-sm text-label-sm">Luxury</span>
+</div>
+<button class="w-full bg-transparent border border-primary text-primary font-label-md text-label-md py-3 px-4 rounded-DEFAULT hover:bg-surface-container-low transition-colors">
+                    Edit Travel Preferences
+                </button>
+</div>
+<div class="bg-surface border border-border-subtle rounded-xl p-card-padding">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Account Stats</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-border-subtle pb-2">
+<span class="font-body-md text-body-md text-slate-grey">Countries Visited</span>
+<span class="font-label-md text-label-md text-primary">14</span>
+</div>
+<div class="flex justify-between items-center border-b border-border-subtle pb-2">
+<span class="font-body-md text-body-md text-slate-grey">Total Trips</span>
+<span class="font-label-md text-label-md text-primary">28</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-slate-grey">Member Since</span>
+<span class="font-label-md text-label-md text-primary">2021</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Right Column: Main Pane -->
+<section class="w-full md:w-2/3 flex flex-col">
+<!-- Tabs -->
+<div class="flex gap-6 border-b border-border-subtle mb-8">
+<button class="pb-4 font-label-md text-label-md text-primary border-b-2 border-primary">Overview</button>
+<button class="pb-4 font-label-md text-label-md text-slate-grey hover:text-primary transition-colors">My Trips</button>
+<button class="pb-4 font-label-md text-label-md text-slate-grey hover:text-primary transition-colors">Settings</button>
+</div>
+<!-- Tab Content: Overview (Active) -->
+<div class="flex flex-col gap-8">
+<!-- Active Trip Summary -->
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Current Itinerary</h3>
+<div class="bg-surface border border-border-subtle rounded-xl p-card-padding flex flex-col md:flex-row gap-6 relative overflow-hidden group hover:whisper-shadow transition-shadow">
+<div class="absolute top-4 right-4 emerald-badge text-emerald-muted font-label-sm text-label-sm px-3 py-1 rounded-full flex items-center gap-1 z-10">
+<span class="material-symbols-outlined text-[14px]" data-icon="lock">lock</span>
+                            Confirmed
+                        </div>
+<div class="w-full md:w-1/3 h-48 md:h-auto rounded-lg overflow-hidden bg-surface-container">
+<div class="bg-cover bg-center w-full h-full" data-alt="A beautiful, sunlit view of the Amalfi Coast in Italy, showing colorful cliffside houses overlooking the azure Mediterranean sea. Shot in high-end editorial travel photography style with vibrant but natural colors." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD24CSXzXhVurFZQMNgJ2FvswwNqd4J-ahunF5tEaYk4Khz235RlPSdIjdSp96SESKluU43cuUiZatc4Nrp_p7sRCx1Rm3ZFBMO_0p4RM3QWK7Ggb0Pht1nNxHe7YTQKtafA_WrwFqqg1rViCNBQWo5WMenv0LjGf2-axDV8S6rvKurjzZRH-AhX4TrS2OxdxGLjjZc0lso0aIzF6pajUJhAA2rn367VoEkMsu3XS9e82IinnBv9VTPsw')"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Amalfi Coast Escape</h4>
+<p class="font-body-md text-body-md text-slate-grey flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-xl" data-icon="calendar_today">calendar_today</span>
+                                    Oct 12 - Oct 20, 2024
+                                </p>
+<p class="font-body-md text-body-md text-on-surface line-clamp-2">
+                                    A curated 8-day journey through Sorrento, Positano, and Ravello, featuring private boat tours, exclusive wine tastings, and premium cliffside accommodations.
+                                </p>
+</div>
+<div class="mt-4 flex gap-4">
+<button class="bg-primary text-on-primary font-label-md text-label-md py-2 px-6 rounded-DEFAULT hover:bg-surface-tint transition-colors">View Details</button>
+<button class="bg-transparent border border-border-subtle text-primary font-label-md text-label-md py-2 px-6 rounded-DEFAULT hover:bg-surface-container-low transition-colors">Manage</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Past Trips Grid -->
+<div>
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-headline-sm text-headline-sm text-primary">Past Adventures</h3>
+<a class="font-label-sm text-label-sm text-slate-grey hover:text-primary transition-colors flex items-center gap-1" href="#">
+                            View All <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Lisbon 2025 (Technically future, but treated as past/completed in prompt structure for example) -->
+<div class="bg-surface border border-border-subtle rounded-xl overflow-hidden hover:whisper-shadow transition-shadow group cursor-pointer flex flex-col">
+<div class="h-40 relative">
+<div class="bg-cover bg-center w-full h-full transition-transform duration-500 group-hover:scale-105" data-alt="A charming, sun-drenched street in Lisbon, Portugal, featuring yellow vintage trams and traditional tiled buildings. Editorial style, warm tones, high quality travel photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAFZVQSHbXH24iIeuIQaSy0uk4GkRs45ykNyZVQsIpxIPwkcgqSPcSQV2bbJWYnn83PUNb_cWpVpdk3Aj__on-xqLx76_e0FASK4jue_3qfSdLY-acqb76v-PO4F0dFjGGanJJ61-U4YfELQNEY82oLP2kYEteD3kHWchifMzcG45K6PGCtn9_if13l7X1LXTysGvNw5kTUN--v5DT5-8-ZEzDCzcphXdrFw8QvqLy2S10KrMI1gTidw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-3 left-4">
+<h5 class="font-headline-sm text-headline-sm text-on-primary">Lisbon 2023</h5>
+</div>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm text-slate-grey font-label-sm text-label-sm px-2 py-1 rounded-DEFAULT flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span> Completed
+                                </div>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<p class="font-body-md text-body-md text-slate-grey mb-3 text-sm">7 days • Cultural &amp; Culinary Focus</p>
+<button class="text-left font-label-md text-label-md text-primary flex items-center gap-1 hover:text-slate-grey transition-colors w-fit">
+                                    View Itinerary <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Bali 2024 -->
+<div class="bg-surface border border-border-subtle rounded-xl overflow-hidden hover:whisper-shadow transition-shadow group cursor-pointer flex flex-col">
+<div class="h-40 relative">
+<div class="bg-cover bg-center w-full h-full transition-transform duration-500 group-hover:scale-105" data-alt="Serene, terraced green rice paddies in Ubud, Bali, bathed in soft morning light. A luxurious infinity pool is partially visible in the foreground. Editorial, calm, minimalist travel photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAztRKfh_zxcHIAwAwG2W_yZAu9r-e3BLIbMSA06D8p_fkzSE-WzoV43kEf3psxze_SJGCcVOZpyEwH-VJOFTeWdLHGsNyzccQziujTIOqrMfUAJbbBHDyzAig9PU2qmGzd8aIlNW0_uXQTXmMurxeDxblb-19905jioQPbwt0oHlS7A2eo5W7A7WoDHBCWbD-ccGUxv-0iMu2Rq2bO5nBeq5egT6mZVMGTAOi41uR5vT-Md8mWExV9ng')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-3 left-4">
+<h5 class="font-headline-sm text-headline-sm text-on-primary">Bali Retreat 2022</h5>
+</div>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm text-slate-grey font-label-sm text-label-sm px-2 py-1 rounded-DEFAULT flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span> Completed
+                                </div>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<p class="font-body-md text-body-md text-slate-grey mb-3 text-sm">10 days • Wellness &amp; Nature</p>
+<button class="text-left font-label-md text-label-md text-primary flex items-center gap-1 hover:text-slate-grey transition-colors w-fit">
+                                    View Itinerary <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>
