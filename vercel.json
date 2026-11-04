@@ -1,3 +1,7 @@
 {
-  "buildCommand": "npm run build:server"
+  "buildCommand": "npm run build --workspace=@concierge/client",
+  "outputDirectory": "client/dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }

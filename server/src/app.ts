@@ -7,10 +7,6 @@ import fs from 'fs';
 import routes from './routes';
 import { errorHandler } from './middleware/errorHandler';
 import { config } from './config/env';
-import { connectDB } from './config/db';
-import mongoose from 'mongoose';
-
-let databaseConnection: Promise<unknown> | null = null;
 
 export function createApp(): Application {
   const app = express();
@@ -37,25 +33,6 @@ export function createApp(): Application {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
   app.use(cookieParser());
-
-  // Vercel invokes the Express app as a serverless function, so there is no
-  // long-lived server startup hook to establish the MongoDB connection.
-  // Reuse the connection across warm invocations and avoid duplicate connects.
-  if (process.env.VERCEL === '1') {
-    app.use(async (_req: Request, _res: Response, next: NextFunction) => {
-      try {
-        if (mongoose.connection.readyState !== 1) {
-          databaseConnection ??= connectDB().finally(() => {
-            databaseConnection = null;
-          });
-          await databaseConnection;
-        }
-        next();
-      } catch (error) {
-        next(error);
-      }
-    });
-  }
 
   // Mount API routes at both root and /api prefix for client convenience
   app.use('/api', routes);
