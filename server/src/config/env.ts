@@ -38,7 +38,7 @@ export interface AppConfig {
 }
 
 export const config: AppConfig = {
-  port: parseInt(process.env.APP_PORT || (process.env.PORT && process.env.PORT !== '8080' ? process.env.PORT : '3000'), 10),
+  port: parseInt(process.env.PORT || process.env.APP_PORT || '3000', 10),
   nodeEnv: process.env.NODE_ENV || 'development',
   clientUrl: process.env.CLIENT_URL || 'http://localhost:3000',
   mongoUri: process.env.MONGODB_URI || 'mongodb://localhost:27017/concierge',

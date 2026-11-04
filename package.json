@@ -11,6 +11,8 @@
     "dev": "npm run build --workspace=@concierge/client && npm run dev --workspace=@concierge/server",
     "dev:all": "npm run dev --workspaces",
     "build": "npm run build --workspace=@concierge/shared && npm run build --workspace=@concierge/server && npm run build --workspace=@concierge/client",
+    "build:server": "npm run build --workspace=@concierge/shared && npm run build --workspace=@concierge/server",
+    "start": "npm run start --workspace=@concierge/server",
     "lint": "npx tsc --noEmit -p shared/tsconfig.json && npx tsc --noEmit -p server/tsconfig.json && npx tsc --noEmit -p client/tsconfig.json",
     "check-adk": "npm run check-adk --workspace=@concierge/server",
     "test": "npm test --workspace=@concierge/client"
